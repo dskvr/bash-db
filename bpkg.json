@@ -1,6 +1,6 @@
 {
   "name": "bash-db",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Very simple Key-Value database on bash script",
   "scripts": [ "db.sh" ],
   "install": "make install"
