@@ -1,0 +1,8 @@
+{
+  "name": "bash-db",
+  "version": "1.0.0",
+  "description": "Very simple Key-Value database on bash script",
+  "scripts": {
+    "install": "cp db.sh /usr/local/bin/db"
+  }
+}
