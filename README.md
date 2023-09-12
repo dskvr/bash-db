@@ -11,14 +11,35 @@ Very simple Key-Value database on bash script. Depends on pre-installed software
 Install
 =======
 
+### bpkg
+```bash
+bpkg install reddec/bash-db
+```
+
+### Make
+```bash
+make install
+``` 
+
+### Manual Installation 
 ```bash
 chmod +x db.sh
 cp db.sh /usr/local/bin/db
 ```
 
+
+
 Usage
 =======
+
+### Command-line Tool
 `db <method> <database> [arguments...]`
+
+### Library
+```bash
+source db.sh
+<method> <database> [arguments...]
+```
 
 Methods:
 
