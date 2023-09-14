@@ -104,36 +104,28 @@ help () {
    exit 0
 }
 
-if [[ ${BASH_SOURCE[0]} != $0 ]]; then
-   # Source
-   export -f get
-   export -f list 
-   export -f last 
-   export -f put 
-   export -f delete 
-else
-   # Start
-   if [[ -z "$1" || "$1" == "--help" ]];
-   then
-      help
-      exit 0
-   fi
-   
-   if [[ "$1" =~ (get|list|last|put|delete) ]];
-   then
-      if [[ -z "$2" ]];
-      then
-         echo "No database provided"
-         exit 2
-      else
-         "$@"
-      fi
-   else
-      echo method "'$1'" not found
-      help
-      exit 1
-   fi
+# Start
+if [[ -z "$1" || "$1" == "--help" ]];
+then
+   help
+   exit 0
 fi
+
+if [[ "$1" =~ (get|list|last|put|delete) ]];
+then
+   if [[ -z "$2" ]];
+   then
+      echo "No database provided"
+      exit 2
+   else
+      "$@"
+   fi
+else
+   echo method "'$1'" not found
+   help
+   exit 1
+fi
+
 
 
 
